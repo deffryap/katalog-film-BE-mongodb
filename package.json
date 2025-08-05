@@ -1,10 +1,13 @@
 {
   "name": "backend-mongodb",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js",
+    "seed": "node seed.js",
+    "seed:destroy": "node destroy.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,10 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.17.0"
+    "mongoose": "^8.17.0",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }

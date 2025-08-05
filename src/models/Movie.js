@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const movieSchema = new mongoose.Schema({
     Title: { type: String, required: true },
@@ -14,4 +14,4 @@ const movieSchema = new mongoose.Schema({
     Runtime: { type: String, default: '' }
 });
 
-module.exports = mongoose.model('Movie', movieSchema);
+export default mongoose.model('Movie', movieSchema);

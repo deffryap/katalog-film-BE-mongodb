@@ -24,6 +24,9 @@ Ini adalah bagian **Backend** dari aplikasi **Katalog Film**, dibangun menggunak
 
 ```
 backend-mongodb/
+├── netlify/
+│   └── functions/
+│       └── api.js            # Handler untuk Netlify Serverless Function
 ├── src/
 │   ├── config/
 │   │   └── db.js             # Konfigurasi koneksi database
@@ -38,9 +41,11 @@ backend-mongodb/
 │   └── routes/
 │       ├── movieRoutes.js    # Definisi endpoint film
 │       └── authRoutes.js     # Definisi endpoint autentikasi
+│   └── app.js                # Konfigurasi inti aplikasi Express
 ├── .env                      # File environment variables (wajib dibuat)
+├── netlify.toml              # Konfigurasi deployment Netlify
 ├── package.json
-└── server.js                 # Titik masuk utama aplikasi
+└── server.js                 # Titik masuk untuk development lokal
 ```
 
 ## 🛠️ Setup Lokal

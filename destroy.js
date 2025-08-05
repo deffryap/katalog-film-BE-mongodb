@@ -1,8 +1,11 @@
-require('dotenv').config();
-const mongoose = require('mongoose');
-const Movie = require('./src/models/Movie');
-const User = require('./src/models/User');
-const connectDB = require('./src/config/db');
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+import Movie from './src/models/Movie.js';
+import User from './src/models/User.js';
+import connectDB from './src/config/db.js';
+
+// Load env vars
+dotenv.config();
 
 const destroyData = async () => {
     try {

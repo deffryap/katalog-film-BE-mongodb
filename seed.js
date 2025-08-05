@@ -1,14 +1,14 @@
 // seed-mongo.js
 // Jalankan dari terminal di dalam folder backend-mongodb: node seed-mongo.js
 
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
-require('dotenv').config();
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
+import dotenv from 'dotenv';
 
 // Impor model dan koneksi DB
-const Movie = require('./src/models/Movie');
-const User = require('./src/models/User');
-const connectDB = require('./src/config/db');
+import Movie from './src/models/Movie.js';
+import User from './src/models/User.js';
+import connectDB from './src/config/db.js';
 
 // --- DATA UNTUK SEEDING ---
 const adminUser = {
@@ -111,6 +111,9 @@ const moviesData = [
     { "imdbID": "tt5500138", "Title": "Descendants of the Sun", "Year": "2016", "Type": "series", "Poster": "https://m.media-amazon.com/images/M/MV5BODRiYjRjMDYtMjJjMS00M2YyLTg5YjYtYzYzNGE5YjI3MzA4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg", "Plot": "A love story develops between Captain Yoo Shi Jin, from Korean Special Forces, and Doctor Kang Mo Yeon...", "Director": "N/A", "Actors": "Song Joong-ki, Song Hye-kyo, Jin Goo", "Genre": "Action, Comedy, Drama", "Runtime": "60 min", "TrailerURL": "https://www.youtube.com/embed/wk_e2M7iXzI" },
     { "imdbID": "tt12451520", "Title": "It's Okay to Not Be Okay", "Year": "2020", "Type": "series", "Poster": "https://m.media-amazon.com/images/M/MV5BYTk0ZGE1YjItYWM4Yy00OWY2LWE1ZTItZmYxODY0NTMyYjdiXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_SX300.jpg", "Plot": "An extraordinary road to emotional healing opens up for an antisocial children's book writer and a selfless psych ward caretaker...", "Director": "N/A", "Actors": "Kim Soo-hyun, Seo Ye-ji, Oh Jung-se", "Genre": "Comedy, Drama, Romance", "Runtime": "75 min", "TrailerURL": "https://www.youtube.com/embed/A0i_1Qc5d_Q" }
 ];
+
+// Load env vars
+dotenv.config();
 
 const importData = async () => {
     try {
