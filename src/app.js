@@ -28,6 +28,7 @@ const corsOptions = {
     if (!origin || whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
+      console.error(`Origin ${origin} diblokir oleh CORS`);
       callback(new Error('Akses diblokir oleh kebijakan CORS'));
     }
   },

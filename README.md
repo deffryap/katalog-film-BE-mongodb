@@ -80,6 +80,11 @@ MONGO_URI=mongodb+srv://<username>:<password>@cluster...
 
 # Kunci rahasia untuk menandatangani token JWT
 JWT_SECRET=kunci-rahasia-yang-sangat-aman
+
+# URL Frontend untuk CORS (bisa lebih dari satu, pisahkan dengan koma)
+# Untuk development lokal, biasanya: http://localhost:5173 atau http://localhost:3001
+# Untuk produksi, ganti dengan URL frontend Anda yang sudah di-deploy
+FRONTEND_URL=https://katalog-film-fe.netlify.app
 ```
 
 #### 4. Jalankan Server
