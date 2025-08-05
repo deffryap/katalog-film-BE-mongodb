@@ -116,7 +116,7 @@ npm start
 npm run seed
 
 # Membersihkan database
-npm run seed:clean
+npm run seed:destroy
 ```
 
 ## 🔒 Keamanan
@@ -137,32 +137,3 @@ Silakan buat pull request atau buka issue jika Anda menemukan bug atau ingin men
 ## 📄 Lisensi
 
 Proyek ini menggunakan lisensi MIT.
-
-### Skrip `seed.js` dan `destroy.js`
-
-Proyek ini menyertakan dua skrip penting di *root* direktori (`katalog-film-project`) untuk mengelola data awal di database MongoDB Anda.
-
--   **`seed.js`**:
-    Skrip ini digunakan untuk mengisi (seeding) database dengan satu set data awal yang lengkap. Ketika dijalankan, skrip ini akan:
-    1.  Menghapus semua data film dan pengguna yang ada untuk memastikan awal yang bersih.
-    2.  Membuat satu pengguna admin default dengan kredensial:
-        -   **Username**: `admin`
-        -   **Password**: `password123`
-    3.  Mengisi koleksi film dengan daftar film, serial TV, drama Korea, dan lainnya yang sudah disiapkan.
-    Gunakan skrip ini untuk menyiapkan aplikasi dengan cepat untuk demonstrasi atau pengembangan awal.
-
--   **`destroy.js`**:
-    Skrip ini adalah kebalikan dari `seed.js`. Fungsinya adalah untuk membersihkan database dengan menghapus **semua** data dari koleksi film dan pengguna. Berhati-hatilah saat menggunakan skrip ini, karena tindakan ini tidak dapat diurungkan. Sangat berguna ketika Anda ingin mengatur ulang database ke keadaan kosong.
-
-Untuk menjalankan skrip ini, pastikan Anda berada di direktori root proyek (`katalog-film-project`) dan gunakan Node.js:
-
-```bash
-# Pastikan Anda berada di direktori backend-mongodb
-cd backend-mongodb
-
-# Untuk mengisi database dari direktori root proyek
-node ../seed.js
-
-# Untuk menghapus semua data dari direktori root proyek
-node ../destroy.js
-```
